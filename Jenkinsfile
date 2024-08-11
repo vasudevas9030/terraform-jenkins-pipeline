@@ -5,13 +5,6 @@ pipeline {
         booleanParam(name: 'autoApprove', defaultValue: false, description: 'Automatically run apply after generating plan?')
         choice(name: 'action', choices: ['apply', 'destroy'], description: 'Select the action to perform')
     }
-
-    environment {
-        AWS_ACCESS_KEY_ID     = AKIA3VI2QSWVRNAB5JV4('aws-access-key-id')
-        AWS_SECRET_ACCESS_KEY =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('aws-secret-access-key')
-        AWS_DEFAULT_REGION    = 'ap-south-1'
-    }
-
     stages {
         stage('Checkout') {
             steps {
